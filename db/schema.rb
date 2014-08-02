@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140802160920) do
+ActiveRecord::Schema.define(version: 20140802162844) do
+
+  create_table "bookmarks", id: false, force: true do |t|
+    t.integer "user_id", null: false
+    t.integer "plot_id", null: false
+  end
 
   create_table "plots", force: true do |t|
     t.string   "name"

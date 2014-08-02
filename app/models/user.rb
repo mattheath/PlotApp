@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
 
   # Domain Logic
   has_many :plots
+
+  has_and_belongs_to_many :bookmarks, :class_name => "Plot", :join_table => "bookmarks"
 end
